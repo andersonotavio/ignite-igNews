@@ -1,4 +1,5 @@
 import { SignInButton } from '../SignInButton'
+import Link from 'next/link'
 import styles from './styles.module.scss'
 
 
@@ -8,10 +9,13 @@ export function Header(){
       <div className={styles.headerContent}>
         <img src="/images/logo.svg" alt="logo do site" />
         <nav>
-          <a href="#" className={styles.active}>Home</a>
-          <a href="#">Post</a>
+          <Link href='/'>
+            <a  className={styles.active}>Home</a>
+          </Link>
+          <Link href='/posts'>
+           <a>Post</a>
+          </Link>
         </nav>
-
         <SignInButton />
       </div>
     </header>
